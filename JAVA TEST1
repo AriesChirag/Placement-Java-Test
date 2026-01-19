@@ -1,0 +1,119 @@
+package Test;
+
+import java.util.Scanner;
+
+public class Question1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+//        if (num % 3 == 0 && num % 7 == 0) {
+//            System.out.println("fun-buzz");
+//        } else if (num % 3 == 0) {
+//            System.out.println("fun");
+//        } else if (num % 7 == 0) {
+//            System.out.println("buzz");
+//        } else {
+//            System.out.println("Invalid");
+//        }
+        if (num % 7 == 0 && num % 3 == 0)
+            System.out.println("fun-buzz");
+        else if(num%3==0)
+            System.out.println("fun");
+        else if(num%7==0)
+            System.out.println("Buzz");
+    }
+}
+
+
+
+
+
+package Test;
+
+import java.util.Scanner;
+
+public class Question2 {
+    static void Even(int s,int end){
+        boolean t=isodd(s);
+        if(s%2==0)
+            s=s+1;
+            for(int i=s;i<=end;i=i+2){
+
+                System.out.print(i+" ");
+            }
+    }
+    static boolean isodd(int s){
+            return s%2 !=0;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the start no: ");
+        int s= sc.nextInt();
+        System.out.println("Enter the start no: ");
+        int e= sc.nextInt();
+//        for(int i=s;i<=e;i++){
+//            if(i%2!=0){
+//            System.out.print(" "+i);
+//
+//            }
+//        }
+        Even(s,e);
+
+    }
+}
+
+
+package Test;
+
+import java.util.Scanner;
+
+public class Question3 {
+    static void palindrome(int s){
+        int pali=s;
+        int sum=0;
+        while(pali!=0){
+            int dig=pali%10;
+            sum=sum*10+dig;
+            pali=pali/10;
+        }
+        if(sum==s){
+            System.out.println("True");
+        }
+        else{
+            System.out.println("False");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        palindrome(num);
+    }
+}
+
+
+package Test;
+
+import java.util.Scanner;
+
+public class Quesrtion4 {
+    static void fibboo(int s){
+        int a,b,c;
+        a=0;
+        b=1;
+        System.out.print(a+ " "+ b);
+        for(int i=0;i<=s-2;i++){
+            c=a+b;
+            System.out.print(" "+ c);
+            a=b;
+            b=c;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        fibboo(num);
+    }
+}
+
+
+
