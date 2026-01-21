@@ -1,0 +1,94 @@
+Question First
+Q.1) Find factorial of a number using Recursive function
+package Test2;
+
+public class Question1 {
+    static  int fact(int s) {
+        int a;
+        if (s == 1 || s == 0)
+            return 1;
+        else {
+            a = s*fact(s-1);
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        int a=5;
+        int res=fact(a);
+        System.out.println(res);
+    }
+}
+
+Q.2) Find Fibonacci series in following pattern
+1
+2 3
+5 8 13
+
+
+package Test2;
+
+public class Question2 {
+    public static void main(String[] args) {
+        int a=0,b=1;
+        for(int i=1;i<=3;i++){
+            for(int j=1;j<=i;j++){
+                int c=a+b;
+                System.out.print(c+" ");
+                a=b;
+                b=c;
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+package Test2;
+
+public class Question3 {
+    public static void main(String[] args) {
+        for(int i=3;i>=1;i--){
+            for(int s=i-1;s>=1;s--){
+                System.out.print(" ");
+            }
+            for(int j=3;j>=i;j--){
+                System.out.print(j);
+            }
+            for (int r = 3; r<=2-i ; r++) {
+                System.out.print(r);
+            }
+
+        System.out.println();
+        }
+    }
+}
+
+package Test2;
+
+public class Question3second {
+    public static void main(String[] args) {
+        for(int i=3;i>=1;i--){
+            for(int j=i;j>=1;j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+package Test2;
+
+public class Question4 {
+    public static void main(String[] args) {
+        int num=4;
+        while(num!=0){
+            int dig=num%2;
+            System.out.print(dig+" ");
+            num=num/2;
+        }
+    }
+}
+
