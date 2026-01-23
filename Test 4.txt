@@ -1,0 +1,55 @@
+package Test4;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Question1 {
+    static void printUni(int[] arr){
+        Arrays.sort(arr);
+        int temp[]=new int[arr.length];
+        int p=Integer.MIN_VALUE;
+        int c=0;
+        for(int i=0;i<arr.length;i++){
+            if(p!=arr[i]){
+                temp[c++]=arr[i];
+                p=arr[i];
+            }
+        }
+        for(int num=0;num<c;num++){
+            System.out.print(temp[num]+" ");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter the no: ");
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        printUni(arr);
+//        System.out.println(Arrays.toString(printUni(arr)));
+    }
+}
+
+
+
+package Test4;
+
+public class Question2 {
+    public static void main(String[] args) {
+        int arr[]={100,200,300,400};
+        int k=2;
+        int firstsum=0;
+        for(int i=0;i<k;i++){
+            firstsum+=arr[i];
+        }
+        int secondsum=firstsum;
+        for(int i=k;i<arr.length;i++){
+            secondsum +=arr[i]-arr[i-k];
+            secondsum=Math.max(secondsum,firstsum);
+        }
+        System.out.println(secondsum);
+    }
+}
