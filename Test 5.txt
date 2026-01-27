@@ -1,0 +1,127 @@
+Questrion FIrst:
+
+
+package Test5;
+
+public class Question1 {
+    static void count(String word){
+        String arr[]={"Car","Truck"};
+        for(String str:arr){
+            int index=0;
+            int count =0;
+            while((index=word.indexOf(str,index))!=-1){
+                    count++;
+                    index+=str.length();
+            }
+            System.out.println(str + " occurred " + count + " time(s)");
+        }
+
+    }
+    public static void main(String[] args) {
+
+        count("I have 2 Car one is Baleno Car and other is Farari Car but Truck is used for\n" +
+                "transportation");
+
+    }
+
+}
+
+
+Question Second:
+
+package Test5;
+
+public class Question1 {
+    static void count(String word){
+        String arr[]={"Car","Truck"};
+        for(String str:arr){
+            int index=0;
+            int count =0;
+            while((index=word.indexOf(str,index))!=-1){
+                    count++;
+                    index+=str.length();
+            }
+            System.out.println(str + " occurred " + count + " time(s)");
+        }
+
+    }
+    public static void main(String[] args) {
+
+        count("I have 2 Car one is Baleno Car and other is Farari Car but Truck is used for\n" +
+                "transportation");
+
+    }
+
+}
+
+
+Question Third:
+
+package Test5;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Question3 {
+    static void palindrome(String str){
+        int n=str.length();
+        int l=n/2;
+        boolean flag=true;
+        char ch[]=str.toLowerCase(Locale.ROOT).toCharArray();
+        for(int i=0;i<l;i++){
+            if(ch[i]!=ch[n-1-i]){
+                flag=false;
+            }
+        }
+        if(flag==true){
+            System.out.println("Palindromw");
+        }
+        else{
+            System.out.println("Not a Palindrome");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String name=sc.next();
+        palindrome(name);
+    }
+}
+
+
+Question 4:
+
+
+package Test5;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Question4 {
+    static int count(String str){
+        if(str==null||str.isEmpty()) {
+            return 0;
+        }
+        int i=0;
+        int n=str.length();
+        int wordcount=0;
+        char ch[]=str.toLowerCase(Locale.ROOT).toCharArray();
+        while(i<n){
+            if(ch[i]!=' '){
+                while(i<n &&ch[i]!=' '){
+                    i++;
+                }
+                wordcount++;
+            }
+            i++;
+        }
+        return wordcount;
+
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+       int c= count(str);
+        System.out.println(c);
+
+    }
+}
